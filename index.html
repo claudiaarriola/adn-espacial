@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ADN Espacial · Claudia Arriola</title>
+<meta name="description" content="Descubre qué debería hacer sentir tu local. Un test de 7 preguntas que convierte tu idea en una primera dirección de diseño: atmósfera, materiales, luz y paleta. Por Claudia Arriola.">
+<meta name="author" content="Claudia Arriola">
+<meta property="og:title" content="ADN Espacial · ¿Qué debería hacer sentir tu local?">
+<meta property="og:description" content="Un test de 7 preguntas que convierte lo que quieres hacer sentir en una dirección de diseño para tu local. Creado por Claudia Arriola.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PE">
+<meta name="theme-color" content="#0F0E0B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230F0E0B'/%3E%3Crect x='14' y='14' width='36' height='36' fill='none' stroke='%23C8A45E' stroke-width='3'/%3E%3Crect x='24' y='24' width='16' height='16' fill='%23C8A45E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&family=DM+Mono:wght@400&display=swap">
+<style>
+:root{
+  color-scheme: dark;
+  --ink:#0F0E0B; --panel:#17150F; --panel-2:#1E1B14; --line:#2F2A20;
+  --cream:#EEE6D5; --muted:#A69C88; --dim:#6F6756;
+  --gold:#C8A45E; --gold-2:#E2C58A; --gold-ink:#1A150B;
+  --display:"Bodoni Moda", "Didot", "Times New Roman", serif;
+  --body:"Jost", "Futura", "Helvetica Neue", Arial, sans-serif;
+  --mono:"DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{background:var(--ink);margin:0}
+img{max-width:100%}
+body{color:var(--cream);font-family:var(--body);font-weight:300;font-size:16px;line-height:1.55;padding-inline:16px;padding-block:0 48px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:1.5px solid var(--gold);outline-offset:3px}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-block:22px;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.brand b{color:var(--cream);font-weight:400}
+.proto{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:4px 8px;border-radius:2px;white-space:nowrap}
+
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0}
+h1{font-size:clamp(40px,7vw,72px);line-height:1.02;letter-spacing:-.01em}
+h1 em{font-style:italic;color:var(--gold-2)}
+h2{font-size:clamp(28px,4.4vw,40px);line-height:1.1}
+p{margin:0}
+.lead{color:var(--muted);font-size:18px;max-width:52ch}
+
+/* intro */
+.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-block:56px 24px}
+.intro-copy{display:flex;flex-direction:column;gap:22px}
+.meta{display:flex;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--dim);letter-spacing:.06em}
+.btn{appearance:none;border:1px solid var(--gold);background:var(--gold);color:var(--gold-ink);padding:14px 26px;font-size:15px;font-weight:500;letter-spacing:.04em;cursor:pointer;border-radius:1px;transition:background .2s,color .2s}
+.btn:hover{background:var(--gold-2)}
+.btn.ghost{background:transparent;color:var(--cream);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--gold);color:var(--gold-2)}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+/* ficha (result sheet) */
+.ficha{background:var(--panel);border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;gap:20px;position:relative}
+.ficha.sample{transform:rotate(-1.2deg);box-shadow:0 30px 60px -30px #000}
+.ficha .tag{position:absolute;top:-11px;left:24px;background:var(--ink);padding:0 8px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase}
+.ficha-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.code{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.1em}
+.row{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:baseline}
+.row .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.row .v{font-size:15.5px}
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.sw{display:flex;flex-direction:column;gap:6px}
+.sw i{display:block;aspect-ratio:1/1.15;border:1px solid rgba(255,255,255,.06)}
+.sw span{font-family:var(--mono);font-size:10px;color:var(--muted);line-height:1.3}
+.quote{font-family:var(--display);font-style:italic;font-size:22px;line-height:1.25;color:var(--gold-2)}
+
+/* quiz */
+.progress{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;padding-block:32px 8px}
+.progress i{height:2px;background:var(--line);display:block;transition:background .3s}
+.progress i.on{background:var(--gold)}
+.step{padding-block:24px 8px;display:flex;flex-direction:column;gap:22px;max-width:760px}
+.step .hint{color:var(--muted);font-size:15px}
+.opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.opt{appearance:none;text-align:left;background:var(--panel);border:1px solid var(--line);padding:16px 18px;cursor:pointer;display:flex;flex-direction:column;gap:4px;transition:border-color .2s,background .2s;border-radius:1px}
+.opt:hover{border-color:var(--dim)}
+.opt[aria-pressed="true"]{border-color:var(--gold);background:var(--panel-2)}
+.opt .t{font-size:16px;font-weight:400}
+.opt .s{font-size:13px;color:var(--muted)}
+.opt[aria-pressed="true"] .t{color:var(--gold-2)}
+.pairs{display:flex;flex-direction:column;gap:14px}
+.pair{display:grid;grid-template-columns:90px 1fr 1fr;gap:10px;align-items:stretch}
+.pair .k{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);align-self:center}
+textarea,input[type=text],input[type=tel]{width:100%;background:var(--panel);border:1px solid var(--line);padding:14px 16px;border-radius:1px;font-size:16px;font-weight:300;resize:vertical}
+textarea::placeholder,input::placeholder{color:var(--dim)}
+textarea:focus,input:focus{border-color:var(--gold);outline:none}
+.counter{font-family:var(--mono);font-size:11px;color:var(--dim);text-align:right}
+.nav{display:flex;justify-content:space-between;gap:12px;padding-block:28px 0;max-width:760px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field label{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:14px;color:var(--muted);cursor:pointer}
+.check input{margin-top:4px;accent-color:var(--gold);width:16px;height:16px;flex:none}
+.note{font-size:13px;color:var(--dim);border-left:1px solid var(--gold);padding-left:12px}
+
+/* result */
+.result{display:grid;grid-template-columns:1fr 340px;gap:32px;padding-block:40px 0;align-items:start}
+.result .ficha{padding:36px}
+.result h2{font-size:clamp(34px,5vw,52px)}
+.side{display:flex;flex-direction:column;gap:18px;position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px)}
+.cta{background:var(--cream);color:var(--ink);padding:28px;display:flex;flex-direction:column;gap:14px}
+.cta .eyebrow{color:#7A5F2A}
+.cta h3{font-size:28px;line-height:1.1}
+.cta p{font-size:15px;color:#4A4336}
+.cta .btn{background:var(--ink);border-color:var(--ink);color:var(--cream);text-align:center;text-decoration:none;display:block}
+.cta .btn:hover{background:#2A251C}
+.small{font-size:13px;color:var(--dim)}
+.divider{height:1px;background:var(--line)}
+.flink{color:var(--muted)}
+.flink:hover{color:var(--gold-2)}
+.check a{color:var(--gold-2)}
+footer{margin-top:64px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--dim)}
+
+.fade{animation:fade .45s ease both}
+@keyframes fade{from{opacity:.001;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.fade{animation:none}.ficha.sample{transform:none}}
+
+@media (max-width:820px){
+  .intro{grid-template-columns:1fr;gap:40px;padding-block:36px 12px}
+  .result{grid-template-columns:1fr}
+  .side{position:static}
+}
+@media (max-width:520px){
+  .row{grid-template-columns:1fr;gap:4px}
+  .pair{grid-template-columns:1fr 1fr}
+  .pair .k{grid-column:1/-1}
+  .fields{grid-template-columns:1fr}
+  .ficha,.result .ficha{padding:22px}
+  .swatches{gap:6px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><b>Claudia Arriola</b> · espacios con IA</div>
+    <div class="proto" title="Versión beta">Beta</div>
+  </header>
+  <main id="app"></main>
+  <footer>
+    <span>ADN Espacial, por Claudia Arriola · Diseño lo que aún no existe.</span>
+    <a href="privacidad.html" class="flink">Política de privacidad</a>
+    <span>Lima · Perú</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ===== CONFIGURACIÓN: completa estos datos antes de publicar ===== */
+const WHATSAPP = "";   // Tu número con código de país, solo dígitos. Ejemplo: "51987654321"
+const INSTAGRAM = "https://www.instagram.com/claudiaarriola.ia/";
+/* ================================================================= */
+
+/* ---------- Content ---------- */
+const BUSINESS = [
+  {id:"restaurante", t:"Restaurante", moment:"la llegada a la mesa"},
+  {id:"cafeteria", t:"Cafetería", moment:"el primer vistazo a la barra"},
+  {id:"salon", t:"Salón · spa", moment:"el momento frente al espejo"},
+  {id:"tienda", t:"Tienda · boutique", moment:"el primer exhibidor que ve al entrar"},
+  {id:"consultorio", t:"Consultorio · clínica", moment:"la espera antes de ser atendido"},
+  {id:"bar", t:"Bar", moment:"la barra a contraluz"},
+  {id:"estudio", t:"Estudio · oficina", moment:"la primera reunión en el espacio"},
+  {id:"otro", t:"Otro", moment:"los primeros diez segundos dentro"}
+];
+
+const FIRST = [
+  {id:"asombro", t:"“Qué increíble”", s:"Asombro, algo que no esperaba"},
+  {id:"refugio", t:"“Aquí quiero quedarme”", s:"Refugio, sentirse en casa"},
+  {id:"premium", t:"“Esto se siente premium”", s:"Sofisticación, cuidado en cada detalle"},
+  {id:"autentico", t:"“Esto es auténtico”", s:"Honestidad, historia, oficio"},
+  {id:"energia", t:"“Esto me da energía”", s:"Movimiento, gente, vida"},
+  {id:"calma", t:"“Esto me da calma”", s:"Silencio, pausa, respiro"}
+];
+
+const AVOID = [
+  {id:"frio", t:"Frío", rule:"Blancos azulados, luz por encima de 4000 K y superficies sin textura"},
+  {id:"generico", t:"Genérico", rule:"Mobiliario de catálogo y paredes lisas sin ningún gesto propio"},
+  {id:"barato", t:"Barato", rule:"Laminados que imitan otro material y paneles de luz uniforme"},
+  {id:"pretencioso", t:"Pretencioso", rule:"Exceso de dorados, brillos y piezas que solo buscan estatus"},
+  {id:"caotico", t:"Caótico", rule:"Más de tres materiales protagonistas y señalética saturada"},
+  {id:"aburrido", t:"Aburrido", rule:"Simetría total y una paleta de un solo tono sin contraste"}
+];
+
+const AFTER = [
+  {id:"inspirado", t:"Inspirado", line:"Sale con una idea nueva en la cabeza."},
+  {id:"relajado", t:"Relajado", line:"Sale más liviano de lo que entró."},
+  {id:"motivado", t:"Motivado", line:"Sale con ganas de hacer algo."},
+  {id:"conectado", t:"Conectado", line:"Sale sintiendo que alguien lo entendió."},
+  {id:"sorprendido", t:"Sorprendido", line:"Sale queriendo contárselo a alguien."},
+  {id:"pertenece", t:"Parte de algo", line:"Sale sintiendo que este lugar también es suyo."}
+];
+
+const PAIRS = [
+  {id:"luz", k:"Luz", a:{id:"tarde", t:"Tarde dorada", s:"Cálida, baja, con sombras"}, b:{id:"manana", t:"Mañana clara", s:"Luminosa, abierta, limpia"}},
+  {id:"ritmo", k:"Ritmo", a:{id:"pausado", t:"Pausado", s:"Rincones, estaciones, quedarse"}, b:{id:"dinamico", t:"Dinámico", s:"Fluir, cruzarse, moverse"}},
+  {id:"tacto", k:"Tacto", a:{id:"natural", t:"Natural", s:"Poro, veta, fibra"}, b:{id:"pulido", t:"Pulido", s:"Liso, preciso, reflejo"}}
+];
+
+/* Base per first feeling: persona, Kelvin, light text. Everything else is composed from all answers. */
+const ARCH = {
+  refugio:{nouns:["Refugio","Guarida","Abrigo"], atm:["Cálida","Íntima"], persona:"Acogedora sin volverse doméstica.", k:2700, lightTxt:"indirecta y baja, a la altura de las mesas",
+    memo:["Un umbral de celosía de madera que filtra la entrada y anuncia el cambio de ritmo","Un rincón más bajo y oscuro, como una cueva cálida dentro del local","Una banca continua empotrada en el muro que invite a quedarse"]},
+  asombro:{nouns:["Escena","Revelación","Umbral"], atm:["Dramática","Escultórica"], persona:"Teatral con precisión, nunca recargada.", k:3000, lightTxt:"contrastada y focal, que recorte volúmenes",
+    memo:["Un volumen oscuro suspendido o exento que se lea desde la vereda","Un pasillo de entrada comprimido que se abra de golpe a un espacio alto","Una pieza de luz que dibuje una sombra protagonista en el muro"]},
+  premium:{nouns:["Atelier","Galería","Precisión"], atm:["Sobria","Elegante"], persona:"Elegante sin sentirse distante.", k:2850, lightTxt:"cálida y dosificada, con lineales ocultos",
+    memo:["Una pieza central de piedra que concentre toda la atención","Un muro de un solo material, sin juntas visibles, como fondo de todo","Un detalle de metal fino que se repita en tiradores, bordes y lámparas"]},
+  autentico:{nouns:["Taller","Memoria","Oficio"], atm:["Honesta","Artesanal"], persona:"Cercana y con historia, sin caer en lo rústico.", k:2700, lightTxt:"puntual y cálida, con lámparas visibles",
+    memo:["Una pared-archivo que cuente el origen del negocio con objetos reales","Una zona de trabajo a la vista donde se vea el oficio","Una pieza hecha a mano por un artesano local como protagonista"]},
+  energia:{nouns:["Plaza","Pulso","Mercado"], atm:["Vibrante","Social"], persona:"Alegre y ordenada a la vez.", k:3500, lightTxt:"generosa y pareja, con acentos de color",
+    memo:["Una barra o mesa larga compartida que obligue a cruzarse","Un plano de color intenso que se vea desde la calle","Una escalera, gradería o desnivel donde la gente se siente a mirar"]},
+  calma:{nouns:["Remanso","Pausa","Claro"], atm:["Serena","Silenciosa"], persona:"Tranquila sin volverse fría.", k:3000, lightTxt:"difusa y rebotada, sin puntos que deslumbren",
+    memo:["Una ventana o lucernario enmarcado como si fuera un cuadro","Un patio o jardinera interior visible desde cada punto","Un muro de textura suave que reciba la luz rasante"]}
+};
+const AFTER_ATM = {inspirado:"estimulante", relajado:"liviana", motivado:"activa", conectado:"cercana", sorprendido:"inesperada", pertenece:"acogedora"};
+const LIGHT_NAME = {tarde:{natural:"de luz baja", pulido:"en penumbra"}, manana:{natural:"de luz abierta", pulido:"de luz precisa"}};
+const LIGHT_ATM = {tarde:{natural:"envolvente", pulido:"nocturna"}, manana:{natural:"luminosa", pulido:"nítida"}};
+
+const MATS = {
+  refugio:{natural:["Madera de nogal","Lino grueso","Piedra caliza apomazada","Barro cocido artesanal","Lana tejida"], pulido:["Cuero encerado","Nogal lacado mate","Terciopelo de algodón","Bronce satinado"]},
+  asombro:{natural:["Piedra volcánica en bruto","Microcemento","Madera carbonizada","Hormigón visto"], pulido:["Metal pavonado","Vidrio acanalado","Acero inoxidable cepillado","Resina translúcida"]},
+  premium:{natural:["Roble ahumado","Mármol de veta suave","Lino lavado","Piedra travertino"], pulido:["Latón cepillado","Laca mate profunda","Mármol pulido","Terciopelo"]},
+  autentico:{natural:["Ladrillo expuesto","Madera recuperada","Fibras tejidas a mano","Tierra estabilizada","Caña"], pulido:["Cerámica esmaltada artesanal","Cobre envejecido","Azulejo hecho a mano"]},
+  energia:{natural:["Madera clara de pino","Corcho","Terrazo de grano grueso","Fibra de yute"], pulido:["Laca de color","Cerámica esmaltada brillante","Terrazo pulido","Metal perforado pintado"]},
+  calma:{natural:["Roble claro","Yeso a la cal","Travertino sin pulir","Textil translúcido","Lino"], pulido:["Travertino pulido","Microcemento sellado","Vidrio esmerilado","Madera de fresno lacada"]}
+};
+
+/* Colour library: [hex, name, role, tags]. Roles: G ground, E material, D anchor, A accent */
+const COLORS = [
+ ["#F2EBDD","Marfil cálido","G","refugio premium calma"],["#EFE9DF","Hueso","G","calma premium"],["#F4EEE3","Blanco cal","G","energia calma relajado"],
+ ["#E9E4DA","Yeso","G","calma asombro inspirado"],["#EDE3D1","Crema","G","refugio autentico conectado"],["#E8DDC7","Lino crudo","G","autentico refugio pertenece"],
+ ["#F1E4D6","Rosa arena","G","conectado refugio energia"],["#E6E8E1","Niebla verde","G","calma relajado"],["#E4E6EA","Gris perla","G","asombro premium inspirado comun"],
+ ["#F3E7CF","Mantequilla","G","energia motivado"],["#E9DCCB","Arcilla clara","G","autentico conectado"],["#EAE5F0","Lavanda pálida","G","inspirado sorprendido"],
+ ["#DED6C8","Piedra caliza","G","premium asombro autentico"],["#F0E0C8","Trigo","G","energia pertenece motivado"],
+ ["#B7765A","Terracota suave","E","refugio conectado autentico"],["#A4553A","Barro cocido","E","autentico pertenece"],["#C9A27A","Roble dorado","E","refugio energia pertenece"],
+ ["#D6C6A8","Arena","E","calma relajado"],["#9AA58E","Salvia","E","calma relajado"],["#8B8780","Gris piedra","E","calma asombro premium"],
+ ["#B08D57","Latón","E","premium inspirado lujo"],["#8C6A3F","Bronce","E","asombro premium lujo"],["#A98C6E","Ratán","E","autentico relajado refugio"],
+ ["#7E8F7A","Musgo","E","calma pertenece relajado"],["#C08A5B","Caramelo","E","refugio energia conectado"],["#9C8DA8","Lila ceniza","E","inspirado sorprendido"],
+ ["#7F9AA6","Azul bruma","E","calma inspirado relajado"],["#B9A48A","Travertino","E","premium calma"],["#C46F4E","Ladrillo","E","autentico energia motivado"],["#8A7F6C","Topo","E","premium asombro comun"],
+ ["#1D1C1A","Carbón","D","asombro premium"],["#121212","Negro ébano","D","premium asombro lujo"],["#5B3F2A","Nogal","D","refugio autentico conectado"],
+ ["#3F4632","Oliva oscuro","D","refugio pertenece calma"],["#24392F","Verde botella","D","premium pertenece"],["#2F3F5C","Índigo","D","autentico inspirado sorprendido"],
+ ["#4A2C2A","Vino tinto","D","refugio premium conectado"],["#3B3A4A","Pizarra","D","asombro calma inspirado"],["#6A4A2E","Tabaco","D","autentico pertenece"],
+ ["#2E4A4A","Petróleo","D","asombro relajado sorprendido"],["#4B4F3C","Liquen","D","calma relajado"],["#3A2E3F","Berenjena","D","inspirado asombro"],
+ ["#5A4636","Café tostado","D","refugio conectado energia"],["#1F2A44","Azul noche","D","asombro premium sorprendido"],
+ ["#8E3B26","Rojo óxido","A","asombro autentico sorprendido"],["#E07A3F","Mandarina","A","energia motivado"],["#2F4FA2","Cobalto","A","energia sorprendido inspirado"],
+ ["#D9A441","Ocre","A","energia pertenece motivado"],["#7A2E3A","Granate","A","premium conectado"],["#C2785C","Coral tostado","A","conectado refugio energia"],
+ ["#5F7F5B","Verde hoja","A","calma pertenece relajado"],["#6B4E8C","Ciruela","A","inspirado sorprendido asombro"],["#3D7A78","Verde agua profundo","A","relajado calma inspirado"],
+ ["#B8432F","Bermellón","A","energia sorprendido motivado"],["#C9A45E","Oro viejo","A","premium inspirado lujo"],["#D4A5A5","Rosa empolvado","A","conectado calma relajado"],
+ ["#4E6E9A","Azul francés","A","calma inspirado premium"],["#A7B53E","Lima seca","A","energia motivado sorprendido"],["#9C5B3C","Cuero","A","autentico refugio pertenece"],["#E3B9A0","Durazno","A","refugio conectado energia"]
+];
+
+/* ---------- Lectura de la descripción ----------
+   Cada entrada: palabras que la activan, etiqueta visible, colores propios (rol), materiales y un gesto opcional. */
+const LEX = [
+ {id:"mar", label:"el mar", re:/\b(mar|playa|playas|oceano|costa|costero|surf\w*|malecon|pacifico|olas?|brisa|muelle|puerto|callao|chalac\w*|la punta|chorrillos|punta hermosa|punta negra|asia|paracas|mancora|huanchaco)\b/,
+  colors:[["#2B5D73","Azul Pacífico","A"],["#E9DCC4","Arena de playa","G"]], mats:["Madera blanqueada","Cuerda trenzada"], memo:"Una ventana horizontal que enmarque el horizonte o lo evoque con una franja de luz"},
+ {id:"verde", label:"lo verde", re:/\b(plantas?|jardin\w*|verde|bosque|huerto|huerta|organic\w*|vegan\w*|vegetal\w*|naturaleza|hojas?|flora)\b/,
+  colors:[["#2F5233","Verde follaje","D"],["#6F8A5A","Helecho","E"]], mats:["Celosía con trepadoras","Piedra con musgo"], memo:"Un muro vivo o una jardinera que crezca hacia el techo"},
+ {id:"cafe", label:"el café", re:/\b(cafe|cafes|cafeteria|espresso|barista|tostad\w*|grano|brunch|desayun\w*)\b/,
+  colors:[["#4B2E22","Cacao tostado","D"],["#EADBC4","Crema de leche","G"]], mats:["Barra de madera maciza"], memo:"La máquina de café como altar, iluminada y a la vista desde la entrada"},
+ {id:"dulce", label:"lo dulce", re:/\b(chocolate\w*|cacao|postres?|pasteler\w*|dulces?|panader\w*|pan|tortas?|reposter\w*|helad\w*)\b/,
+  colors:[["#6B4130","Cacao","E"],["#B03A55","Frambuesa","A"]], mats:["Mármol de pastelería"], memo:"Una vitrina baja y larga donde el producto sea el protagonista"},
+ {id:"noche", label:"la noche", re:/\b(vinos?|(?<!slow )bar|bares|coctel\w*|cocktail\w*|pisco|cervez\w*|noche|nocturn\w*|fiesta|tragos?|musica en vivo)\b/,
+  colors:[["#4A1E2A","Vino profundo","D"],["#C98A2B","Ámbar","A"]], mats:["Vidrio ámbar","Cuero oscuro"], memo:"Una barra retroiluminada que brille como una lámpara en la oscuridad"},
+ {id:"andino", label:"lo andino", re:/\b(andin\w*|sierra|cusco|cuzco|puno|ayacucho|huancayo|textil\w*|telar\w*|alpaca|quechua|artesan\w*|ancestral\w*)\b/,
+  colors:[["#A3243B","Rojo cochinilla","A"],["#C8913A","Ocre andino","E"]], mats:["Textil de telar andino","Piedra labrada"], memo:"Un paño de textil andino tratado como obra de arte, no como decoración"},
+ {id:"selva", label:"la selva", re:/\b(selva|amazon\w*|tropical\w*|iquitos|tarapoto|exotic\w*|frutas?)\b/,
+  colors:[["#1F4D3A","Verde amazónico","D"],["#D2552A","Naranja achiote","A"]], mats:["Bambú","Fibra de palma"], memo:"Un techo de fibras naturales que filtre la luz como un dosel de árboles"},
+ {id:"maiz", label:"el maíz", re:/\b(maiz|chicha|choclo|mazamorra|morad[oa])\b/,
+  colors:[["#5B2A55","Morado maíz","A"],["#E3B33E","Amarillo maíz","E"]], mats:["Cerámica de barro vidriada"], memo:"Un plano de color morado profundo que se vuelva la foto del local"},
+ {id:"marino", label:"el mar en la mesa", re:/\b(ceviche\w*|cevicher\w*|marisc\w*|pescad\w*|leche de tigre|conchas?)\b/,
+  colors:[["#A8B83A","Limón","A"],["#F2F0EA","Blanco sal","G"]], mats:["Azulejo blanco artesanal"], memo:"Una barra fría a la vista, con el producto fresco como espectáculo"},
+ {id:"japon", label:"lo japonés", re:/\b(japon\w*|nikkei|zen|sushi|ramen|wabi\w*|minimal\w*|matcha)\b/,
+  colors:[["#EFE8DA","Papel washi","G"],["#232220","Sumi","D"]], mats:["Papel washi","Madera de pino claro"], memo:"Un umbral de listones de madera que filtre la mirada al entrar"},
+ {id:"flores", label:"las flores", re:/\b(flor\w*|rosas?|romant\w*|bodas?|novias?|femenin\w*|delicad\w*)\b/,
+  colors:[["#B8457A","Rosa buganvilla","A"],["#F0E1DC","Rosa nácar","G"]], mats:["Terciopelo rosa empolvado"], memo:"Una instalación floral suspendida que cambie con cada temporada"},
+ {id:"familia", label:"la familia", re:/\b(ninos?|ninas?|familia\w*|infantil\w*|juegos? para ninos|hijos?|bebes?|kids)\b/,
+  colors:[["#E8B83A","Amarillo sol","A"],["#8FB3C9","Azul cielo","E"]], mats:["Corcho","Linóleo de color"], memo:"Un rincón a otra escala, pensado para los más pequeños"},
+ {id:"bienestar", label:"el bienestar", re:/\b(yoga|spa|bienestar|meditac\w*|masaj\w*|wellness|terapi\w*|relaj\w*|respir\w*|pilates)\b/,
+  colors:[["#C9A493","Arcilla rosada","E"],["#E7E2D8","Niebla","G"]], mats:["Piedra pulida por agua","Lino lavado"], memo:"Un recorrido de entrada lento, con agua o sonido que marque el cambio"},
+ {id:"trabajo", label:"el trabajo", re:/\b(trabaj\w*|cowork\w*|laptop\w*|estudiar|estudiantes?|concentr\w*|oficina\w*|reunion\w*|productiv\w*)\b/,
+  colors:[["#24324A","Azul tinta","D"]], mats:["Mesas largas de roble","Paneles acústicos de fieltro"], memo:"Una mesa larga de trabajo bajo una luz pareja, separada del bullicio"},
+ {id:"lujo", label:"lo exclusivo", re:/\b(lujo\w*|exclusiv\w*|elegan\w*|premium|vip|alta gama|sofistic\w*)\b/,
+  colors:[["#CDB68A","Champagne","A"]], mats:["Ónix retroiluminado"], memo:"Un objeto único exhibido como en museo, con una sola luz encima"},
+ {id:"urbano", label:"lo urbano", re:/\b(urban\w*|industrial\w*|loft|fabrica|cemento|calle|graffiti|skate\w*|street)\b/,
+  colors:[["#2D2E30","Grafito","D"],["#8A4B2D","Acero corten","E"]], mats:["Acero corten","Malla metálica"], memo:"Una estructura metálica vista que se vuelva parte del mobiliario"},
+ {id:"memoria", label:"la memoria", re:/\b(vintage|retro|antig\w*|abuel\w*|casona|tradicion\w*|herencia|recuerd\w*|nostalg\w*|clasic\w*)\b/,
+  colors:[["#C49A2E","Mostaza","A"],["#6E3B2A","Caoba","E"]], mats:["Baldosa calcárea","Madera de caoba"], memo:"Un piso de baldosa calcárea que cuente una historia desde la entrada"},
+ {id:"bohemio", label:"lo bohemio", re:/\b(barranco|bohemi\w*|arte|artist\w*|galeria|musica|libros?|librer\w*|poesia|cultural\w*)\b/,
+  colors:[["#27407A","Azul añil","A"],["#B4553E","Terracota de muro","E"]], mats:["Libreros de piso a techo","Ladrillo pintado"], memo:"Un muro que funcione como galería cambiante para artistas locales"},
+ {id:"luz", label:"la luz natural", re:/\b(luz|luminos\w*|sol|soleado|ventanal\w*|terraza\w*|aire libre|abierto)\b/,
+  colors:[["#F6F1E7","Blanco de sol","G"]], mats:["Vidrio y madera clara"], memo:"Una terraza o ventanal que haga de la luz del día un material más"},
+ {id:"escape", label:"el escape", re:/\b(escap\w*|refugio|desconect\w*|silencio\w*|tranquil\w*|calma|paz|oasis|huir|ciudad)\b/,
+  colors:[["#8E9B8A","Gris salvia","E"]], mats:["Textiles gruesos","Madera con veta marcada"], memo:"Una entrada que te saque de la calle: un pasillo, un cambio de piso o de luz"},
+ /* ---- Comida peruana ---- */
+ {id:"criollo", label:"la cocina criolla", re:/\b(crioll\w*|anticuch\w*|lomo saltado|aji|ajies|rocoto|picanter\w*|huarique|polleri\w*|pollo a la brasa|causa|papa a la huancaina|cau cau|tacu tacu|cevich\w* de barrio|menu|sanguch\w*|chicharron\w*|tamales?|comida peruana|sazon)\b/,
+  colors:[["#E2A21B","Amarillo ají","A"],["#5A3524","Barro de olla","D"]], mats:["Ollas y platos de barro","Mayólica criolla"], memo:"Una cocina o parrilla a la vista, con el fuego como espectáculo"},
+ {id:"chifa", label:"el chifa", re:/\b(chifa|wantan|tallarin saltado|arroz chaufa|chaufa|kam lu|dim sum|cantones\w*)\b/,
+  colors:[["#9B1C1C","Rojo laca","A"],["#1A1414","Negro laca","D"]], mats:["Laca roja","Celosía de madera oscura"], memo:"Una mesa redonda giratoria bajo una lámpara de papel como centro del salón"},
+ {id:"superfood", label:"los superalimentos", re:/\b(quinua|maca|kiwicha|superalimento\w*|camu camu|aguaymanto|saludable\w*|fit|bowls?|acai|jugos?|smoothies?|vegano\w*|plant based)\b/,
+  colors:[["#D8C29A","Quinua","E"],["#F0A830","Aguaymanto","A"]], mats:["Frascos de vidrio a la vista","Cerámica artesanal mate"], memo:"Un muro de ingredientes en frascos, como una despensa abierta"},
+ {id:"cerveza", label:"la cerveza artesanal", re:/\b(cerveza artesanal|cerveceri\w*|craft|ipa|lupulo|tap ?room|barril\w*)\b/,
+  colors:[["#6E3B1C","Cobre tostado","D"],["#D6A21E","Dorado lúpulo","A"]], mats:["Tanques de acero a la vista","Madera de barrica"], memo:"Los tanques o grifos a la vista, iluminados como parte del espectáculo"},
+ /* ---- Moda, belleza, joyería ---- */
+ {id:"moda", label:"la moda", re:/\b(ropa|moda|outfits?|boutique|prendas?|vestid\w*|streetwear|sneakers?|zapatill\w*|looks?|disenador\w*|marca de ropa|textil de autor|tienda de ropa|polos?|casacas?)\b/,
+  colors:[["#B48A5E","Camel","E"],["#A01C3C","Carmín","A"]], mats:["Rieles de metal negro","Espejos de cuerpo entero con marco fino"], memo:"Un probador amplio y bien iluminado, pensado como escenario para la foto"},
+ {id:"skincare", label:"el cuidado de la piel", re:/\b(skin ?care|cosmetic\w*|cremas?|piel|maquillaje|belleza|serums?|dermat\w*|facial\w*|k ?beauty|spa facial|cuidado personal)\b/,
+  colors:[["#F4F1EE","Blanco nube","G"],["#D9B3A5","Rosa arcilla","E"],["#7FA58A","Verde aloe","A"]], mats:["Cerámica mate y vidrio esmerilado","Repisas de acrílico translúcido"], memo:"Un lavabo o mesa de prueba donde el cliente pueda tocar y probar el producto"},
+ {id:"joyeria", label:"la joyería", re:/\b(joyer\w*|joyas?|anillos?|aretes?|collares?|pulseras?|plata|bisuter\w*|orfebre\w*|accesorios)\b/,
+  colors:[["#1C2440","Azul terciopelo","D"],["#C9A13B","Oro pulido","A"]], mats:["Vitrinas de vidrio extra claro","Terciopelo"], memo:"Vitrinas a la altura de los ojos con una luz puntual sobre cada pieza"},
+ {id:"tattoo", label:"el arte en la piel", re:/\b(tatuaj\w*|tattoo\w*|piercing\w*|barber\w*|barbas?)\b/,
+  colors:[["#141414","Negro tinta","D"],["#6D1A2A","Burdeos","A"]], mats:["Azulejo metro negro","Cuero capitoné"], memo:"Un sillón protagonista bajo una luz puntual, como escenario del oficio"},
+ /* ---- Mascotas ---- */
+ {id:"mascotas", label:"las mascotas", re:/\b(mascotas?|perros?|perritos?|gatos?|gatitos?|pet|pets|pet friendly|veterinar\w*|grooming|peluqueria canina)\b/,
+  colors:[["#E8833A","Naranja juguete","A"],["#D2B48C","Pino claro","E"]], mats:["Piso vinílico lavable","Bebederos de cerámica empotrados"], memo:"Una zona de espera con bebedero y rincón para mascotas, visible desde la vitrina"},
+ /* ---- Café de especialidad ---- */
+ {id:"especialidad", label:"el café de origen", re:/\b(especialidad|cafe de origen|origen|chanchamayo|villa rica|cajamarca|jaen|v60|chemex|cold brew|filtrad\w*|tueste|catas?)\b/,
+  colors:[["#9A2C2C","Cereza de café","A"],["#B89B72","Yute","E"]], mats:["Sacos de yute","Barra de slow bar"], memo:"Un slow bar donde el cliente vea la preparación como un ritual"},
+ /* ---- Juegos, cómics, deporte ---- */
+ {id:"gaming", label:"los videojuegos", re:/\b(gamers?|gaming|videojueg\w*|juegos virtuales|juegos de video|esports?|consolas?|playstation|xbox|nintendo|realidad virtual|vr|arcade|lan ?center|cabinas?)\b/,
+  colors:[["#0F1018","Negro pantalla","D"],["#7B3FE4","Violeta neón","A"],["#2BB3C0","Cian eléctrico","E"]], mats:["Iluminación LED lineal","Paneles acústicos"], memo:"Una línea de luz de color que recorra el techo y lleve hacia las estaciones de juego"},
+ {id:"comics", label:"los cómics", re:/\b(comics?|historietas?|manga|anime|superheroe\w*|coleccion\w*|figuras|funko\w*|geek|friki|otaku|cosplay)\b/,
+  colors:[["#F2C230","Amarillo viñeta","A"],["#C2312F","Rojo onomatopeya","E"],["#151515","Negro trazo","D"]], mats:["Estanterías modulares de exhibición","Vinil gráfico"], memo:"Un muro de colección con luz de vitrina, como una portada gigante"},
+ {id:"deporte", label:"el deporte", re:/\b(deport\w*|gimnas\w*|gym|crossfit|running|fitness|entrena\w*|ciclismo|padel|voley|boxeo|escalada|surf shop|tenis)\b/,
+  colors:[["#F26A21","Naranja energía","A"],["#5E6163","Gris caucho","E"]], mats:["Piso de caucho","Acero galvanizado"], memo:"Una pista o línea marcada en el piso que invite a moverse"},
+ {id:"futbol", label:"el fútbol", re:/\b(futbol\w*|pelota|hinchas?|alianza|universitario|sporting|seleccion\w*|bicolor|mundial|canchas?|estadio|camisetas?|clasico)\b/,
+  colors:[["#2E6B34","Verde césped","D"],["#C8102E","Rojo bicolor","A"]], mats:["Gradería de madera","Césped sintético en detalles"], memo:"Una gradería o banca larga frente a una pantalla, como en el estadio"},
+ /* ---- Tendencias y territorio ---- */
+ {id:"sostenible", label:"lo sostenible", re:/\b(sostenib\w*|ecolog\w*|eco|reciclad\w*|recicl\w*|zero waste|upcycl\w*|consciente|kilometro cero|biodegrad\w*|a granel)\b/,
+  colors:[["#B59B7C","Cartón reciclado","E"],["#34452F","Verde musgo profundo","D"]], mats:["Madera recuperada","Paneles de fibra reciclada"], memo:"Un muro hecho con material recuperado que cuente su origen"},
+ {id:"kpop", label:"la cultura coreana", re:/\b(k ?pop|corean\w*|bubble tea|boba|kawaii|idols?|dorama\w*)\b/,
+  colors:[["#F28DB2","Rosa chicle","A"],["#E6DDF2","Lila pastel","G"]], mats:["Acrílico de colores","Neón flex"], memo:"Un muro con luz rosada pensado para la foto en redes"},
+ {id:"redes", label:"las redes sociales", re:/\b(instagram\w*|tiktok\w*|redes|influencer\w*|viral|fotos?|instagrameable|content|creadores?)\b/,
+  colors:[["#F26B5B","Coral vivo","A"]], mats:["Neón flex","Fondo fotográfico de color"], memo:"Un rincón fotográfico con fondo de color y luz frontal, pensado para redes"},
+ {id:"colonial", label:"la Lima colonial", re:/\b(centro de lima|centro historico|jiron|balcon\w*|colonial\w*|virreinal|casonas?|barrios altos|rimac)\b/,
+  colors:[["#2F5D8A","Azul balcón","A"],["#6B3E26","Madera de balcón","E"]], mats:["Celosía de balcón limeño","Azulejo sevillano"], memo:"Una celosía inspirada en los balcones limeños que filtre la luz de la calle"},
+ {id:"sillar", label:"Arequipa", re:/\b(arequip\w*|sillar|mistiano\w*|yanahuara|picanteria arequipena)\b/,
+  colors:[["#ECE6D6","Sillar","G"]], mats:["Sillar","Bóveda de cañón"], memo:"Un muro de sillar con luz rasante que muestre su textura"},
+ {id:"norte", label:"el norte", re:/\b(norte\w*|piura\w*|chiclayo|trujillo|lambayeque|mochica|moche|chimu|algarrobo|chulucanas|tumbes|mancora|chalan\w*)\b/,
+  colors:[["#7A4E2D","Algarrobo","E"],["#A8432A","Rojo mochica","A"]], mats:["Madera de algarrobo","Cerámica de Chulucanas"], memo:"Una pieza de cerámica norteña como protagonista de la entrada"}
+];
+LEX.forEach(e=>e.colors.forEach(c=>COLORS.push([c[0],c[1],c[2],"desc:"+e.id])));
+
+function readDesc(text){
+  const t=(text||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  if(!t.trim()) return [];
+  // Words that only repeat the business type (café in a cafetería) count last: the rest of the story is what makes it personal
+  const obvious = {cafeteria:["cafe"], bar:["noche"], salon:["bienestar"], estudio:["trabajo"]}[S.business] || [];
+  const found = LEX.map(e=>{ const m=t.match(e.re); return m?{e, at:m.index + (obvious.includes(e.id)?1e4:0)}:null; }).filter(Boolean);
+  // A more specific theme replaces its general one
+  const ids = found.map(x=>x.e.id);
+  return found.filter(x=>!(x.e.id==="cafe" && ids.includes("especialidad")) && !(x.e.id==="noche" && ids.includes("cerveza"))).sort((a,b)=>a.at-b.at).slice(0,3).map(x=>x.e);
+}
+
+function hsl(hex){
+  const n=parseInt(hex.slice(1),16), r=(n>>16&255)/255, g=(n>>8&255)/255, b=(n&255)/255;
+  const mx=Math.max(r,g,b), mn=Math.min(r,g,b), l=(mx+mn)/2, d=mx-mn;
+  let h=0, s=0;
+  if(d){ s=d/(1-Math.abs(2*l-1)); h = mx===r?((g-b)/d)%6 : mx===g?(b-r)/d+2 : (r-g)/d+4; h=(h*60+360)%360; }
+  return {h,s,l};
+}
+function hashStr(str){ let h=2166136261; for(let i=0;i<str.length;i++){ h^=str.charCodeAt(i); h=Math.imul(h,16777619); } return h>>>0; }
+function rand(seed,i){ let x=(seed ^ Math.imul(i+1,2654435761))>>>0; x^=x<<13; x>>>=0; x^=x>>17; x^=x<<5; x>>>=0; return (x%10000)/10000; }
+function pickN(arr,n,seed,salt){ return arr.map((v,i)=>[v,rand(seed,i+salt)]).sort((a,b)=>a[1]-b[1]).slice(0,n).map(x=>x[0]); }
+
+function scoreColor(c, idx, seed){
+  const [hex,,role,tagStr]=c, tags=tagStr.split(" "), {h,s,l}=hsl(hex);
+  if(tagStr.startsWith("desc:")){ const id=tagStr.slice(5); if(!STORY.ids.includes(id)) return -1e9; }
+  const warm = s>0.12 && (h<75 || h>330), cool = s>0.12 && h>=150 && h<=300;
+  let sc = 0;
+  if(tags.includes(S.first)) sc+=3;
+  if(tags.includes(S.after)) sc+= role==="A" ? 3.6 : 2.2;
+  if(S.pairs.luz==="tarde"){ if(warm) sc+=1.2; if(cool) sc-=0.6; } else { if(cool) sc+=0.7; if(role==="G" && l>0.9) sc+=0.6; }
+  if(S.pairs.ritmo==="dinamico"){ if(role==="A") sc+=s*2; } else { if(s<0.35) sc+=0.6; else if(role==="A") sc-=s; }
+  if(S.pairs.tacto==="pulido"){ if(role==="D") sc+=(0.3-l)*4; if(role==="G") sc+=(l-0.85)*4; }
+  else { if(role==="E" && s>0.15 && s<0.5) sc+=0.7; }
+  if(S.avoid.includes("frio") && cool && role!=="A") sc-=2;
+  if(S.avoid.includes("barato") && s>0.6) sc-=1;
+  if(S.avoid.includes("pretencioso") && tags.includes("lujo")) sc-=2.5;
+  if(S.avoid.includes("generico") && tags.includes("comun")) sc-=2;
+  if(S.avoid.includes("caotico") && role==="A" && s>0.55) sc-=1.2;
+  if(S.avoid.includes("aburrido") && role==="A") sc+=s;
+  if(tagStr.startsWith("desc:")) sc += 9.5 - STORY.ids.indexOf(tagStr.slice(5))*1.2;
+  return sc + rand(seed, idx)*2.2;
+}
+let STORY = {ids:[]};
+function palette(seed){
+  const pick = (role, allowDesc) => { let best=null, bs=-1e9;
+    COLORS.forEach((c,i)=>{ if(c[2]!==role) return; if(!allowDesc && c[3].startsWith("desc:")) return; const v=scoreColor(c,i,seed); if(v>bs){bs=v;best=c;} });
+    return best; };
+  const roles=["G","E","D","A"];
+  let chosen = roles.map(r=>pick(r,true));
+  // Keep at least one colour that comes from the buttons, so both sources show
+  const fromDesc = chosen.filter(c=>c[3].startsWith("desc:")).length;
+  if(fromDesc===4) chosen[0]=pick("G",false);
+  return chosen.map(c=>[c[0],c[1],c[3].startsWith("desc:")]);
+}
+
+/* ---------- State ---------- */
+const S = {step:0, business:null, first:null, avoid:[], after:null, pairs:{luz:null,ritmo:null,tacto:null}, desc:"", name:"", stage:null, consent:false, marketing:false};
+const TOTAL = 7; // quiz steps 1..6 + contact (7)
+const app = document.getElementById("app");
+
+/* ---------- Helpers ---------- */
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function el(html){ const t=document.createElement("template"); t.innerHTML=html.trim(); return t.content; }
+function progress(){ let h='<div class="progress" aria-hidden="true">'; for(let i=1;i<=TOTAL;i++) h+=`<i class="${i<=S.step?'on':''}"></i>`; return h+'</div>'; }
+function optBtn(group,o,on){ return `<button type="button" class="opt" data-g="${group}" data-v="${o.id}" aria-pressed="${on}"><span class="t">${esc(o.t)}</span>${o.s?`<span class="s">${esc(o.s)}</span>`:""}</button>`; }
+
+/* ---------- Engine ---------- */
+function build(){
+  const base = ARCH[S.first];
+  const biz = BUSINESS.find(b=>b.id===S.business);
+  const after = AFTER.find(x=>x.id===S.after);
+  const seed = hashStr([S.business,S.first,S.after,S.avoid.join(","),S.pairs.luz,S.pairs.ritmo,S.pairs.tacto,(S.desc||"").trim().toLowerCase()].join("|"));
+  let k = base.k + (S.pairs.luz==="tarde" ? -150 : 350) + (S.pairs.tacto==="pulido" ? 50 : 0);
+  k = Math.max(2400, Math.min(4000, Math.round(k/50)*50));
+  const story = readDesc(S.desc); STORY = {ids: story.map(e=>e.id)};
+  const t = S.pairs.tacto, other = t==="natural" ? "pulido" : "natural";
+  const main = pickN(MATS[S.first][t],2,seed,11);
+  const firstWords = main.map(m=>m.split(" ")[0]);
+  const extra = pickN(MATS[S.first][other].filter(m=>!firstWords.includes(m.split(" ")[0])),1,seed,23);
+  const storyMats = story.map(e=>pickN(e.mats,1,seed,61)[0]).slice(0,2);
+  const mats = storyMats.length===0 ? [...main, ...extra] : storyMats.length===1 ? [main[0], storyMats[0], main[1]] : [main[0], ...storyMats];
+  const noun = pickN(base.nouns,1,seed,31)[0];
+  const a = {
+    name: noun+" "+LIGHT_NAME[S.pairs.luz][t],
+    atm: [pickN(base.atm,1,seed,41)[0], AFTER_ATM[S.after], LIGHT_ATM[S.pairs.luz][t]].join(" · "),
+    persona: base.persona, lightTxt: base.lightTxt,
+    memo: story.length ? story[0].memo : pickN(base.memo,1,seed,51)[0],
+    pal: palette(seed)
+  };
+  const storyCols = a.pal.filter(p=>p[2]).map(p=>p[1]);
+  const used = story.filter((e,i)=> i<2 || e.colors.some(c=>storyCols.includes(c[1])));
+  const bits = []; [...storyCols, ...storyMats.map(m=>m.toLowerCase())].forEach(b=>{ if(!bits.some(x=>x.toLowerCase()===b.toLowerCase())) bits.push(b); });
+  const andJoin = arr => arr.join(", ").replace(/, ([^,]*)$/," y $1");
+  const storyLine = !S.desc.trim() ? "" : story.length
+    ? `Leí ${andJoin(used.map(e=>e.label))} en tu descripción. De ahí salen ${andJoin(bits)}.`
+    : "Tu descripción afinó la combinación de tonos y materiales. Si nombras el barrio, el producto o la historia del negocio, la ficha se vuelve aún más tuya.";
+  const recorrido = S.pairs.ritmo==="pausado"
+    ? "Por estaciones: rincones con distinta intensidad para que cada quien encuentre su lugar"
+    : "Fluido: una circulación clara con un punto central donde la gente se cruza";
+  const avoid = S.avoid.map(id=>AVOID.find(x=>x.id===id).rule);
+  return {a, biz, after, k, mats, recorrido, avoid, storyLine, code:"ADN-"+String(seed%10000).padStart(4,"0")};
+}
+
+function fichaHTML(r, opts){
+  opts = opts||{};
+  return `
+  <article class="ficha ${opts.sample?'sample':''}" ${opts.sample?'aria-label="Ejemplo de resultado"':''}>
+    ${opts.sample?'<span class="tag">Ejemplo · cafetería en Barranco</span>':''}
+    <div class="ficha-head"><span class="eyebrow">ADN Espacial · versión inicial</span><span class="code">${r.code}</span></div>
+    <div>
+      <p class="small" style="margin-bottom:6px">${esc(r.biz.t)}</p>
+      <h2>${esc(r.a.name)}</h2>
+    </div>
+    <p class="quote">${esc(FIRST.find(f=>f.id===S.first||f.id===r.firstId)?.t||"")}</p>
+    ${!opts.sample && r.storyLine ? `<div class="row"><span class="k">Tu historia</span><span class="v">${esc(r.storyLine)}</span></div>` : ""}
+    <div class="row"><span class="k">Atmósfera</span><span class="v">${esc(r.a.atm)}</span></div>
+    <div class="row"><span class="k">Personalidad</span><span class="v">${esc(r.a.persona)}</span></div>
+    <div class="row"><span class="k">Materiales</span><span class="v">${r.mats.map(esc).join(" + ")}</span></div>
+    <div class="row"><span class="k">Luz</span><span class="v">${r.k} K, ${esc(r.a.lightTxt)}</span></div>
+    ${opts.sample?'':`<div class="row"><span class="k">Recorrido</span><span class="v">${esc(r.recorrido)}</span></div>
+    <div class="row"><span class="k">Momento clave</span><span class="v">Cuidar ${esc(r.biz.moment)}</span></div>
+    <div class="row"><span class="k">Al salir</span><span class="v">${esc(r.after.line)}</span></div>
+    <div class="row"><span class="k">Gesto memorable</span><span class="v">${esc(r.a.memo)}</span></div>`}
+    <div class="row"><span class="k">Paleta</span><span class="v"></span></div>
+    <div class="swatches">${r.a.pal.map((p,i)=>`<div class="sw"><i style="background:${p[0]}"></i><span>${["Fondo","Material","Ancla","Acento"][i]}${p[2]?" · tu historia":""}<br>${esc(p[1])}<br>${p[0]}</span></div>`).join("")}</div>
+    ${r.avoid.length?`<div class="row"><span class="k">Evitar</span><span class="v">${r.avoid.map(esc).join(". ")}.</span></div>`:""}
+  </article>`;
+}
+
+/* ---------- Screens ---------- */
+function intro(){
+  const saved = JSON.parse(JSON.stringify(S));
+  Object.assign(S,{business:"cafeteria",first:"refugio",after:"relajado",avoid:["frio"],pairs:{luz:"tarde",ritmo:"pausado",tacto:"natural"}});
+  const r = build(); r.firstId="refugio";
+  const sample = fichaHTML(r,{sample:true});
+  Object.assign(S, saved);
+  app.innerHTML = `
+  <section class="intro fade">
+    <div class="intro-copy">
+      <span class="eyebrow">Para quien va a abrir o renovar un local</span>
+      <h1>¿Qué debería <em>hacer sentir</em> tu local?</h1>
+      <p class="lead">No te voy a preguntar qué estilo quieres. Responde siete preguntas sobre lo que quieres provocar y recibe la primera dirección espacial de tu negocio: atmósfera, materiales, luz y paleta.</p>
+      <div class="meta"><span>7 preguntas</span><span>·</span><span>3 minutos</span><span>·</span><span>Gratis</span></div>
+      <div class="actions"><button class="btn" id="start">Descubrir mi ADN Espacial</button></div>
+    </div>
+    ${sample}
+  </section>`;
+  document.getElementById("start").onclick = ()=>go(1);
+}
+
+function stepScreen(){
+  let body="", title="", hint="", valid=false;
+  switch(S.step){
+    case 1: title="Tu negocio es…"; hint="Elige el que más se acerque.";
+      body=`<div class="opts">${BUSINESS.map(o=>optBtn("business",o,S.business===o.id)).join("")}</div>`; valid=!!S.business; break;
+    case 2: title="Cuando alguien entra, ¿qué quieres que sienta primero?"; hint="Solo una. La primera impresión dura unos diez segundos.";
+      body=`<div class="opts">${FIRST.map(o=>optBtn("first",o,S.first===o.id)).join("")}</div>`; valid=!!S.first; break;
+    case 3: title="¿Qué no debería transmitir nunca?"; hint="Elige hasta dos.";
+      body=`<div class="opts">${AVOID.map(o=>optBtn("avoid",o,S.avoid.includes(o.id))).join("")}</div>`; valid=S.avoid.length>0; break;
+    case 4: title="¿Cómo quieres que se sienta tu cliente al salir?"; hint="Esto define lo que recordará.";
+      body=`<div class="opts">${AFTER.map(o=>optBtn("after",o,S.after===o.id)).join("")}</div>`; valid=!!S.after; break;
+    case 5: title="Si tu marca fuera un lugar…"; hint="Elige un lado en cada par, sin pensarlo mucho.";
+      body=`<div class="pairs">${PAIRS.map(p=>`<div class="pair"><span class="k">${p.k}</span>${optBtn("pair:"+p.id,p.a,S.pairs[p.id]===p.a.id)}${optBtn("pair:"+p.id,p.b,S.pairs[p.id]===p.b.id)}</div>`).join("")}</div>`;
+      valid=Object.values(S.pairs).every(Boolean); break;
+    case 6: title="Cuéntame tu negocio en una o dos frases"; hint="Opcional, pero es lo que más afina el resultado. Por ejemplo: “Una cafetería en Barranco donde la gente pueda trabajar y sentir que escapa de la ciudad.”";
+      body=`<div class="field"><textarea id="desc" rows="4" maxlength="280" placeholder="Escribe con tus palabras…">${esc(S.desc)}</textarea><div class="counter"><span id="cnt">${S.desc.length}</span>/280</div></div>`; valid=true; break;
+    case 7: title="¿A nombre de quién preparo tu ficha?"; hint="Tu resultado aparece en el siguiente paso.";
+      body=`<div class="fields">
+        <div class="field"><label for="name">Nombre</label><input id="name" type="text" autocomplete="given-name" value="${esc(S.name)}" placeholder="Tu nombre"></div>
+      </div>
+      <div class="field"><label>¿En qué momento estás?</label><div class="opts">${[{id:"abrir",t:"Voy a abrir"},{id:"renovar",t:"Quiero renovar"},{id:"explorar",t:"Solo estoy explorando"}].map(o=>optBtn("stage",o,S.stage===o.id)).join("")}</div></div>
+      <label class="check" for="consent"><input type="checkbox" id="consent" ${S.consent?"checked":""}> <span>He leído la <a href="privacidad.html" target="_blank" rel="noopener">Política de privacidad</a> y acepto que, si envío mi ficha, Claudia Arriola use mis datos para responderme y contactarme sobre mi proyecto. Puedo retirar mi consentimiento cuando quiera.</span></label>
+      <label class="check" for="marketing"><input type="checkbox" id="marketing" ${S.marketing?"checked":""}> <span>Opcional: acepto recibir novedades y promociones de Claudia Arriola. Si no lo marcas, igual recibes tu resultado.</span></label>
+      <p class="note">Tu ficha se genera en tu propio navegador y esta página no guarda tus respuestas. Solo me llegan si eliges enviarlas por WhatsApp en el siguiente paso.</p>`;
+      valid = S.name.trim().length>1 && S.stage && S.consent; break;
+  }
+  app.innerHTML = `${progress()}
+  <section class="step fade">
+    <span class="eyebrow">Pregunta ${S.step} de ${TOTAL}</span>
+    <h2>${title}</h2>
+    <p class="hint">${hint}</p>
+    ${body}
+  </section>
+  <div class="nav">
+    <button class="btn ghost" id="back">Atrás</button>
+    <button class="btn" id="next" ${valid?"":"disabled"}>${S.step===TOTAL?"Ver mi ADN Espacial":"Siguiente"}</button>
+  </div>`;
+  bindStep();
+}
+
+function bindStep(){
+  app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+    const g=b.dataset.g, v=b.dataset.v;
+    if(g==="avoid"){
+      const i=S.avoid.indexOf(v);
+      if(i>=0) S.avoid.splice(i,1); else { if(S.avoid.length>=2) S.avoid.shift(); S.avoid.push(v); }
+    } else if(g.startsWith("pair:")) S.pairs[g.slice(5)]=v;
+    else S[g]=v;
+    const auto = ["business","first","after"].includes(g);
+    const cur = S.step;
+    stepScreen();
+    if(auto) setTimeout(()=>{ if(S.step===cur) go(cur+1); },260);
+  });
+  const d=document.getElementById("desc");
+  if(d) d.oninput=()=>{S.desc=d.value; document.getElementById("cnt").textContent=d.value.length;};
+  const mk=document.getElementById("marketing"); if(mk) mk.onchange=()=>{S.marketing=mk.checked;};
+  ["name"].forEach(id=>{const i=document.getElementById(id); if(i) i.oninput=()=>{S[id]=i.value; refreshNext();};});
+  const c=document.getElementById("consent"); if(c) c.onchange=()=>{S.consent=c.checked; refreshNext();};
+  document.getElementById("back").onclick=()=>go(S.step-1);
+  document.getElementById("next").onclick=()=>go(S.step+1);
+}
+function refreshNext(){
+  const ok = S.name.trim().length>1 && S.stage && S.consent;
+  document.getElementById("next").disabled=!ok;
+}
+
+function result(){
+  const r = build();
+  const first = S.name.trim().split(/\s+/)[0];
+  app.innerHTML = `
+  <section class="result fade">
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <span class="eyebrow">${esc(first)}, este es tu punto de partida</span>
+      ${fichaHTML(r)}
+      <div class="actions"><button class="btn ghost" id="copy">Copiar mi ficha</button><button class="btn ghost" id="again">Empezar de nuevo</button><span class="small" id="copied" aria-live="polite"></span></div>
+    </div>
+    <aside class="side">
+      <div class="cta">
+        <span class="eyebrow">Design Flash · 60 min</span>
+        <h3>Esto es la intuición. En una sesión lo vemos.</h3>
+        <p>Una conversación 1:1 donde convierto esta dirección en una primera imagen de tu local.</p>
+        ${WHATSAPP ? `<a class="btn" id="wa" href="${waLink(r)}" target="_blank" rel="noopener">Enviar mi ficha por WhatsApp</a>
+        <p class="small" style="color:#6B6252">Se abrirá WhatsApp con tu ficha lista. Tú decides si la envías.</p>` : `<a class="btn" href="${INSTAGRAM}" target="_blank" rel="noopener">Quiero visualizar mi local</a>`}
+      </div>
+    </aside>
+  </section>`;
+  document.getElementById("again").onclick=()=>{Object.assign(S,{step:0,business:null,first:null,avoid:[],after:null,pairs:{luz:null,ritmo:null,tacto:null},desc:""}); go(0);};
+  document.getElementById("copy").onclick=()=>copyFicha(r);
+}
+
+function waLink(r){
+  const stage = {abrir:"Voy a abrir", renovar:"Quiero renovar", explorar:"Solo estoy explorando"}[S.stage] || "";
+  const msg = [`Hola Claudia, soy ${S.name.trim()}. Hice el test ADN Espacial y quiero verlo en una Design Flash.`,
+    `Momento: ${stage}.`, S.desc.trim() ? `Mi negocio: ${S.desc.trim()}` : "", "",
+    plainFicha(r), "",
+    `Acepté la Política de privacidad.${S.marketing ? " También acepto recibir novedades y promociones." : ""}`].filter(x=>x!==null).join("\n");
+  return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(msg);
+}
+
+function plainFicha(r){
+  return [`ADN ESPACIAL · versión inicial (${r.code})`, `${r.biz.t} — ${r.a.name}`,
+    r.storyLine?`Tu historia: ${r.storyLine}`:"", `Atmósfera: ${r.a.atm}`, `Personalidad: ${r.a.persona}`, `Materiales: ${r.mats.join(" + ")}`,
+    `Luz: ${r.k} K, ${r.a.lightTxt}`, `Recorrido: ${r.recorrido}`, `Momento clave: cuidar ${r.biz.moment}`,
+    `Al salir: ${r.after.line}`, `Gesto memorable: ${r.a.memo}`,
+    `Paleta: ${r.a.pal.map(p=>p[1]+" "+p[0]).join(" · ")}`, r.avoid.length?`Evitar: ${r.avoid.join(". ")}.`:"",
+    "", "Claudia Arriola · Diseño lo que aún no existe."].filter(Boolean).join("\n");
+}
+async function copyFicha(r){
+  const out=document.getElementById("copied");
+  try{ await navigator.clipboard.writeText(plainFicha(r)); out.textContent="Copiada."; }
+  catch(e){ out.textContent="No se pudo copiar desde aquí."; }
+}
+
+function go(n){
+  S.step=Math.max(0,n);
+  if(S.step===0) intro();
+  else if(S.step<=TOTAL) stepScreen();
+  else result();
+  window.scrollTo(0,0);
+}
+go(0);
+})();
+</script>
+
+</body>
+</html>
